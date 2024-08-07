@@ -58,11 +58,10 @@ function Review() {
     } while (newIndex === currentIndex);
     setCurrentIndex(newIndex);
   };
-  console.log(currentIndex);
   
   return (
     <div className="review">
-      <div id={'author-'+currentIndex}>
+      <div id={'author-'+(currentIndex+1)}>
       <img src={image} alt={name} className="person-img" />
       <h4 id={`author-id-${currentIndex + 1}`}>{name}</h4>
       <p className="job">{job}</p>
