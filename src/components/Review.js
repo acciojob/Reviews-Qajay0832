@@ -58,13 +58,16 @@ function Review() {
     } while (newIndex === currentIndex);
     setCurrentIndex(newIndex);
   };
-
+  console.log(currentIndex);
+  
   return (
     <div className="review">
+      <div id={'author-'+currentIndex}>
       <img src={image} alt={name} className="person-img" />
       <h4 id={`author-id-${currentIndex + 1}`}>{name}</h4>
       <p className="job">{job}</p>
       <p className="info">{text}</p>
+      </div>
       <div>
         <button className="prev-btn" onClick={handlePrev}>
           Previous
@@ -73,7 +76,7 @@ function Review() {
           Next
         </button>
         <button className="random-btn" onClick={handleRandom}>
-          Surprise me
+        Surprise me
         </button>
       </div>
     </div>
